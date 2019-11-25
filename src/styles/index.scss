@@ -1,0 +1,327 @@
+@import 'notification';
+@import 'Form';
+@import 'Carteiras';
+@import 'modal';
+// Fontawesome
+@import "../../public/fontawesome/scss/fa-light.scss";
+@import "../../public/fontawesome/scss/fa-regular.scss";
+@import "../../public/fontawesome/scss/fa-solid.scss";
+@import "../../public/fontawesome/scss/fontawesome";
+
+@import 'not-found-route.scss';
+
+body {
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.root{
+  position: relative;
+}
+
+.main-container{
+  text-align: center;
+  margin: auto;
+
+  .container{
+    position: relative;
+  }
+
+  .labels{
+    position: absolute;
+    display: block;
+    top: 18px;
+    left: calc(95vw - 242px);
+    z-index: 100;
+
+    button{
+      border:none;
+      position: relative;
+      color: #fff;
+      height: 30px;
+      margin-bottom: 5px;
+      display: block;
+      width: 90px;
+
+      &.is-selected{
+        width: 125px;
+        -webkit-transition: width 0.5s ease-in-out;
+        -moz-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        /* left: 0; */
+        right: -25px;
+        /* margin: 0 auto; */
+        width: 0;
+        height: 0;
+        border-top: solid 15px transparent !important;
+        border-left: solid 25px;
+        border-bottom: solid 15px transparent !important;
+      }
+    }
+    .blue{
+      background-color: #134481;
+      &::after{
+        border-color: #134481;
+      }
+    }
+    .orange{
+      background-color: orangered;
+      &::after{
+        border-color: orangered;
+      }
+    }
+    .green{
+      background-color: #31b243;
+      &::after{
+        border-color: #31b243;
+      }
+    }
+    .yellow{
+      background-color: #bccf24;
+      &::after{
+        border-color: #bccf24;
+      }
+    }
+    .brown{
+      background-color: #ce6a0f;
+      &::after{
+        border-color: #ce6a0f;
+      }
+    }
+    .pink{
+      background-color: #d82566;
+      &::after{
+        border-color: #d82566;
+      }
+    }
+  }
+  
+  .content{
+    margin-top: -1px;
+    padding: 20px; 
+    min-height:  100px;
+  }
+}
+.title{
+  display: table;
+  margin: auto;
+  h1{
+    display: table-cell;
+    vertical-align: bottom;
+  }
+  img{
+    height: 100px
+  }
+  button{
+    display: none;
+  }
+}
+.weight-chart{
+  background-color: #fff;
+  border-radius: 10px
+}
+.capa{
+  img{
+    border-radius: 50%;
+    background-color: #fff;
+    height: 200px;
+    width: 200px;
+    object-fit: contain
+  }
+}
+.main-container .carteirinha{
+  width: calc(95% - 210px );
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  background-color: #fff;  
+  border-radius: 29px;
+}
+.grafico{
+  width: calc(100% - 80px);
+  margin: auto;
+}
+
+.main-home {
+  height: 100%;
+  min-height: 100vh;
+  display: inline-flex;
+  background-color: #ade9ff;  
+  p,h1,span{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.home-texto{
+  margin: auto;
+  position: relative;
+  width: 45%;
+}
+
+.rbc-calendar{
+  .fa-check-circle{
+    color: #008500;
+  }
+  .fa-times-circle{
+    color: #ea0000;
+  }
+  .fa-question-circle{
+    color: #cdcdcd;
+  }
+}
+.rbc-agenda-view{
+  table.rbc-agenda-table{
+    tbody tr td{
+      &.rbc-agenda-date-cell{
+        vertical-align: middle;
+      }
+      
+      &.rbc-agenda-status-cell{
+        padding: 0;
+        .icon.is-large{
+          font-size: 16pt;
+        }
+      }
+    }
+  }
+}
+
+.home-left{
+  width: 66%;
+  display: inline-flex;
+  position: relative;
+
+  img{
+    margin:auto;
+    height: 350px;
+  }
+  
+}
+.home-right{
+
+  width: 33%;
+  padding: 3%;
+  display: inline-flex;
+  
+  span{
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+.botoes-login{
+  margin: auto;
+  border-radius: 5px;
+}
+.botoes-login #titulo{
+  display: inherit;
+  text-align: center;
+}
+.agenda{
+  min-height: 400px;
+  background-color: #fff;
+  .rbc-calendar{
+    min-height: 70vh;
+  }
+}
+/*STYLE FOR SCREEN W/ LESS THEN 560PX*/
+@media screen and (max-width: 560px) {
+  .home-left, .home-right{
+    width: 100%;
+    display: block;
+  }
+  .main-home{
+    display: block;
+    text-align: center;
+  }
+  .home-left{
+    img{
+      height: 150px;
+      margin-top: 20px;
+    }
+  }
+  .home-texto {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 20px;
+  }
+
+  .main-container {
+
+    padding: 0;
+
+    .carteirinha{
+      width: auto;
+      padding: 0;
+      border-radius: 15px;
+      min-height: calc(100vh - 100px);
+      margin: 0px 10px 10px;
+    
+    }
+    .labels {
+      display: block;
+      position: initial;
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+      transition:  0.9s ease-in-out;      
+      border-radius: 15px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &.is-open{
+        max-height: 100vh;
+      }
+
+      button{
+        width: 100%;
+        margin-bottom: 0;
+        opacity: 0.7;
+        transition: opacity 0.4s ease-in-out;
+
+        &.is-selected{
+          opacity: 1;
+          width: inherit;
+        }
+
+        &:after{
+          content: none;
+        }
+      }
+    }
+  }
+  .title button {
+    display: initial;
+  }
+
+  .navbar-dark.btn{
+    position: absolute;
+    right: 4vw;
+    top: 2vh;
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(2, 160, 218,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+  }
+
+  .rbc-toolbar {
+    display: grid;
+  }
+
+}
+
+a.btn.btn-primary:not([href]):not([tabindex]) {
+  color: #fff;
+}

@@ -1,0 +1,13 @@
+.carteirinha .modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: rgba(211,211,211,0.5);
+    .control#recipient-photo{
+        margin-bottom: 2px;
+    }
+}
