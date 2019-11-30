@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B666CBA2CA80CF9C9556050 /* Pods_dsoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF92032FCD00E97301449D /* Pods_dsoo.framework */; };
+		C633EE092393225F00D9C1CA /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633EE082393225F00D9C1CA /* Records.swift */; };
+		C633EE0B2393241000D9C1CA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633EE0A2393241000D9C1CA /* File.swift */; };
 		C682FDFC2393186F0072205C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682FDFB2393186F0072205C /* AppDelegate.swift */; };
 		C682FDFE2393186F0072205C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682FDFD2393186F0072205C /* SceneDelegate.swift */; };
 		C682FE002393186F0072205C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682FDFF2393186F0072205C /* ViewController.swift */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		325112B6BF350E8914856CF5 /* Pods-dsoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsoo.release.xcconfig"; path = "Target Support Files/Pods-dsoo/Pods-dsoo.release.xcconfig"; sourceTree = "<group>"; };
+		386EC0B34C9A9F7F847AEDDC /* Pods-dsoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsoo.debug.xcconfig"; path = "Target Support Files/Pods-dsoo/Pods-dsoo.debug.xcconfig"; sourceTree = "<group>"; };
+		C2BF92032FCD00E97301449D /* Pods_dsoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dsoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C633EE082393225F00D9C1CA /* Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
+		C633EE0A2393241000D9C1CA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C682FDF82393186F0072205C /* dsoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dsoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C682FDFB2393186F0072205C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C682FDFD2393186F0072205C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +39,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B666CBA2CA80CF9C9556050 /* Pods_dsoo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3F0B1DD3E5B87CD075C5899 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				386EC0B34C9A9F7F847AEDDC /* Pods-dsoo.debug.xcconfig */,
+				325112B6BF350E8914856CF5 /* Pods-dsoo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C633EE042393219D00D9C1CA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C633EE0A2393241000D9C1CA /* File.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C633EE05239321A400D9C1CA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C633EE082393225F00D9C1CA /* Records.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C633EE06239321AD00D9C1CA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C633EE07239321D300D9C1CA /* Core */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C633EE07239321D300D9C1CA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C682FDFF2393186F0072205C /* ViewController.swift */,
+				C682FE012393186F0072205C /* Main.storyboard */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		C682FDEF2393186F0072205C = {
 			isa = PBXGroup;
 			children = (
 				C682FDFA2393186F0072205C /* dsoo */,
 				C682FDF92393186F0072205C /* Products */,
+				A3F0B1DD3E5B87CD075C5899 /* Pods */,
+				D4862AFC48D65217CE2D10AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +109,24 @@
 		C682FDFA2393186F0072205C /* dsoo */ = {
 			isa = PBXGroup;
 			children = (
+				C633EE042393219D00D9C1CA /* API */,
+				C633EE05239321A400D9C1CA /* Entities */,
+				C633EE06239321AD00D9C1CA /* Modules */,
 				C682FDFB2393186F0072205C /* AppDelegate.swift */,
 				C682FDFD2393186F0072205C /* SceneDelegate.swift */,
-				C682FDFF2393186F0072205C /* ViewController.swift */,
-				C682FE012393186F0072205C /* Main.storyboard */,
 				C682FE04239318720072205C /* Assets.xcassets */,
 				C682FE06239318720072205C /* LaunchScreen.storyboard */,
 				C682FE09239318720072205C /* Info.plist */,
 			);
 			path = dsoo;
+			sourceTree = "<group>";
+		};
+		D4862AFC48D65217CE2D10AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF92032FCD00E97301449D /* Pods_dsoo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C682FE0C239318720072205C /* Build configuration list for PBXNativeTarget "dsoo" */;
 			buildPhases = (
+				A62D7FE3CF2B065038370979 /* [CP] Check Pods Manifest.lock */,
 				C682FDF42393186F0072205C /* Sources */,
 				C682FDF52393186F0072205C /* Frameworks */,
 				C682FDF62393186F0072205C /* Resources */,
+				2951E73AE092DE51895BE3B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +197,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2951E73AE092DE51895BE3B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dsoo/Pods-dsoo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dsoo/Pods-dsoo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dsoo/Pods-dsoo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A62D7FE3CF2B065038370979 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dsoo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C682FDF42393186F0072205C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C633EE0B2393241000D9C1CA /* File.swift in Sources */,
 				C682FE002393186F0072205C /* ViewController.swift in Sources */,
 				C682FDFC2393186F0072205C /* AppDelegate.swift in Sources */,
+				C633EE092393225F00D9C1CA /* Records.swift in Sources */,
 				C682FDFE2393186F0072205C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +390,7 @@
 		};
 		C682FE0D239318720072205C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 386EC0B34C9A9F7F847AEDDC /* Pods-dsoo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +409,7 @@
 		};
 		C682FE0E239318720072205C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 325112B6BF350E8914856CF5 /* Pods-dsoo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
