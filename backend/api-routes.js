@@ -15,7 +15,6 @@ router.get('/records', function(req, res) {
 
 //RECORDS @post
 router.post('/records', function(req, res) {
-  console.log(req)
   db.setRecord(req, res)
 })
 
