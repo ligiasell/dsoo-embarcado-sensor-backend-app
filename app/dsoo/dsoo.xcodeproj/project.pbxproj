@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B666CBA2CA80CF9C9556050 /* Pods_dsoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF92032FCD00E97301449D /* Pods_dsoo.framework */; };
-		C633EE092393225F00D9C1CA /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633EE082393225F00D9C1CA /* Records.swift */; };
 		C633EE0B2393241000D9C1CA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633EE0A2393241000D9C1CA /* File.swift */; };
+		C633EE1423941DAA00D9C1CA /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633EE1323941DAA00D9C1CA /* Record.swift */; };
 		C682FDFC2393186F0072205C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682FDFB2393186F0072205C /* AppDelegate.swift */; };
 		C682FDFE2393186F0072205C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682FDFD2393186F0072205C /* SceneDelegate.swift */; };
 		C682FE002393186F0072205C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682FDFF2393186F0072205C /* ViewController.swift */; };
@@ -22,8 +22,8 @@
 		325112B6BF350E8914856CF5 /* Pods-dsoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsoo.release.xcconfig"; path = "Target Support Files/Pods-dsoo/Pods-dsoo.release.xcconfig"; sourceTree = "<group>"; };
 		386EC0B34C9A9F7F847AEDDC /* Pods-dsoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsoo.debug.xcconfig"; path = "Target Support Files/Pods-dsoo/Pods-dsoo.debug.xcconfig"; sourceTree = "<group>"; };
 		C2BF92032FCD00E97301449D /* Pods_dsoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dsoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C633EE082393225F00D9C1CA /* Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
 		C633EE0A2393241000D9C1CA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		C633EE1323941DAA00D9C1CA /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		C682FDF82393186F0072205C /* dsoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dsoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C682FDFB2393186F0072205C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C682FDFD2393186F0072205C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		C633EE05239321A400D9C1CA /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				C633EE082393225F00D9C1CA /* Records.swift */,
+				C633EE1323941DAA00D9C1CA /* Record.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -246,8 +246,8 @@
 			files = (
 				C633EE0B2393241000D9C1CA /* File.swift in Sources */,
 				C682FE002393186F0072205C /* ViewController.swift in Sources */,
+				C633EE1423941DAA00D9C1CA /* Record.swift in Sources */,
 				C682FDFC2393186F0072205C /* AppDelegate.swift in Sources */,
-				C633EE092393225F00D9C1CA /* Records.swift in Sources */,
 				C682FDFE2393186F0072205C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
